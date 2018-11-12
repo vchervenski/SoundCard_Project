@@ -28,8 +28,9 @@ class MainAppController(object):
     def choose_wave(self):
         return self.mainView.v.get()
 
-    def init_view(self, root):
+    def __init__(self, root):
         self.check = None
+        self.errorCode = -1
         self.mainView = MainAppView(master=root)
 
         self.mainView.gen["command"] = self.generate
@@ -37,4 +38,5 @@ class MainAppController(object):
 
         # Start the gui
         self.mainView.start_gui()
+
 
