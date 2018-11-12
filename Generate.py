@@ -42,7 +42,7 @@ class Generate:
 
     def white_noise(self):
         for i in range(200):
-            rand = random.randint(-self.sample, self.sample)
+            rand = random.randint(int(-self.sample), int(self.sample))
             self.data.append(int(rand))
 
     def sign(self, x):
